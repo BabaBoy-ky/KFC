@@ -20,6 +20,8 @@ h1 {
     display: flex;
     gap: 15px;
     margin: 20px 0;
+    flex-wrap: wrap; /* Permet aux boutons de se réorganiser sur plusieurs lignes si nécessaire */
+    justify-content: center; /* Centre les boutons dans le conteneur */
 }
 .choices button {
     padding: 15px 30px;
@@ -50,6 +52,42 @@ footer {
     bottom: 10px;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+/* Media Queries pour rendre le design responsive sur les écrans mobiles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .choices button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    .result {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .choices button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .result {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    footer {
+        font-size: 0.7rem;
+    }
 }
 
 
